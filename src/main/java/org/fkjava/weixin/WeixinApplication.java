@@ -28,7 +28,7 @@ public class WeixinApplication {
 			@Autowired RedisConnectionFactory connectionFactory){
 		RedisTemplate<String, ? extends InMessage> template = new RedisTemplate<>();
 		template.setConnectionFactory(connectionFactory);
-		template.setValueSerializer(new JsonRedisSerializer<InMessage>());
+		template.setValueSerializer(new JsonRedisSerializer());
 		return template;
 	}
 	
